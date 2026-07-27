@@ -67,4 +67,74 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
-
+def add(a, b):
+    return a + b
+ 
+def subtract(a, b):
+    return a - b
+ 
+def multiply(a, b):
+    return a * b
+ 
+def divide(a, b):
+    if b == 0:
+        print("Error: Cannot divide by zero")
+        return None
+    return round(a / b, 2)
+ 
+def modulus(a, b):
+    return a % b
+ 
+def exponent(a, b):
+    return a ** b
+ 
+def get_number(prompt):
+    value = input(prompt)
+    if "." in value:
+        return float(value)
+    return int(value)
+ 
+ 
+while True:
+    print("============================")
+    print("     SIMPLE CALCULATOR")
+    print("============================")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Modulus")
+    print("6. Exponentiation")
+    print("7. Quit")
+    choice = input("Select an operation (1-7): ")
+ 
+    if choice == "7":
+        print("Goodbye!")
+        break
+ 
+    if choice not in ["1", "2", "3", "4", "5", "6"]:
+        print("Invalid choice, try again.")
+        continue
+ 
+    num1 = get_number("Enter first number : ")
+    num2 = get_number("Enter second number: ")
+ 
+    if choice == "1":
+        result = add(num1, num2)
+        print(f"Result: {num1} + {num2} = {result}")
+    elif choice == "2":
+        result = subtract(num1, num2)
+        print(f"Result: {num1} - {num2} = {result}")
+    elif choice == "3":
+        result = multiply(num1, num2)
+        print(f"Result: {num1} * {num2} = {result}")
+    elif choice == "4":
+        result = divide(num1, num2)
+        if result is not None:
+            print(f"Result: {num1} / {num2} = {result}")
+    elif choice == "5":
+        result = modulus(num1, num2)
+        print(f"Result: {num1} % {num2} = {result}")
+    elif choice == "6":
+        result = exponent(num1, num2)
+        print(f"Result: {num1} ** {num2} = {result}")
