@@ -41,12 +41,12 @@
 
 
 if name == "__main__":
-    number = int(input("Enter a number "))
+    number = int(input("Enter a number here "))
 
     if is_prime(number):
         print(f"{number} is a prime number")
     else:
-        print(f"{number} is NOT a prime number")
+        print(f"{number} is not a prime number")
 
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
